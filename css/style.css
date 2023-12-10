@@ -1,0 +1,205 @@
+/********** Template CSS **********/
+:root {
+    --light-1: #F7FAFF;
+    --light-2: #DADBE1;
+    --dark-1: #2C2D32;
+    --dark-2: #37383d;
+    --primary: #0000ff;
+    --primary-1: #0000E6;
+    --success: #00AE50;
+    --success-1: #009947;
+    --success-2: #007a53;
+}
+
+/* Back to top */
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 60px;
+    z-index: 99;
+}
+
+/* Navbar */
+.navbar.sticky-top {
+    top: -100px;
+    transition: .5s;
+}
+
+.nav .nav-link {
+    font-weight: 500;
+}
+
+.nav .nav-link:hover,
+.nav .nav-link.active {
+    color: var(--success) !important;
+}
+
+/* Text Color */
+.text-light-1{
+    color: var(--light-1) !important;
+}
+
+.text-light-2{
+    color: var(--light-2) !important;
+}
+
+.text-dark-2{
+    color: var(--dark-2) !important;
+}
+
+/* Background Color */
+.bg-dark-1{
+    background: var(--dark-1) !important;
+}
+
+.bg-dark-2{
+    background: var(--dark-2) !important;
+}
+
+/* Jumbotron */
+.jumbotron{
+    margin-top: 5rem;
+    padding: 2rem 1rem;
+}
+
+/* Id Section */
+#profil a{
+    color: var(--light-2) !important;
+}
+
+#profil a:hover{
+    color: var(--success) !important;
+}
+
+#about{
+    background: var(--dark-2) !important;
+}
+
+#project .card .card-footer{
+    background-color: var(--dark-2);
+}
+
+#contact{
+    background: var(--dark-2) !important;
+}
+
+/* Class Section */
+.about hr{
+    width: 50px;
+    border-top: 3px solid #fefae0;
+    border-radius: 5px;
+}
+
+.project hr{
+    width: 50px;
+    border-top: 3px solid #fefae0;
+    border-radius: 5px;
+}
+
+.project small{
+    font-size: 12px;
+}
+
+.contact hr{
+    width: 50px;
+    border-top: 3px solid #fefae0;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer .copyright a {
+    color: var(--light-2) !important;
+}
+
+footer .copyright a:hover {
+    color: var(--success) !important;
+}
+
+footer .nav li:hover {
+    color: var(--success) !important;
+}
+
+/* Button */
+.btn.btn-success {
+    color: var(--dark-2);
+    background-color: var(--success);
+}
+
+.btn.btn-success:hover {
+    background-color: var(--success-1);
+}
+
+.btn.btn-primary {
+    background-color: var(--primary);
+}
+
+.btn.btn-primary:hover {
+    background-color: var(--primary-1);
+}
+
+/* Alert */
+.alert.alert-success {
+    color: var(--dark-2);
+    background-color: var(--success);
+    border: none;
+}
+
+/* hr Lines */
+hr{
+    width: 50px;
+    border-top: 3px solid var(--success);
+    border-radius: 5px;
+}
+
+.wrapper .text {
+    color: var(--light-1);
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.wrapper .dynamic-text {
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+
+.dynamic-text li {
+    list-style: none;
+    color: var(--success);
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    left: -30px;
+    animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide {
+    100% {
+        top: -360px;
+    }
+}
+
+.dynamic-text li span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 90px;
+    width: 100%;
+    background: var(--dark-1);
+    border-left: 2px solid var(--light-1);
+    animation: typing 3s steps(14) infinite;
+    
+}
+
+@keyframes typing {
+    40%,
+    60% {
+        left: calc(100% + 30%);
+    }
+
+    100% {
+        left: 0;
+    }
+}
